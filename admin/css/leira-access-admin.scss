@@ -1,0 +1,145 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.leira-access-container {
+  margin: 1em 0;
+  font-size: 13px;
+  line-height: 1.5;
+  vertical-align: middle;
+
+  > p {
+    margin: 5px 0 0 0;
+  }
+
+  input[type="checkbox"] {
+    margin-top: 0;
+  }
+
+  input[type="radio"] {
+    margin-top: 0;
+  }
+
+  div.leira-access-roles {
+    display: none;
+    margin-left: 20px;
+
+    > p {
+      margin: 0;
+      font-style: italic;
+      color: #666;
+    }
+  }
+}
+
+input.leira-access-status:checked + label + div.leira-access-roles {
+  display: block;
+}
+
+//Gutenberg
+.leira-access-container-block.components-panel__body {
+  .components-base-control.components-radio-control {
+    margin-bottom: 0;
+  }
+
+  .leira-access-roles {
+    margin-left: 20px;
+
+    > p {
+      margin: 0;
+      font-style: italic;
+      color: #666;
+    }
+
+    > .components-base-control {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+//Menu Items
+.menu-item-settings {
+  .leira-access-container {
+    > p {
+      color: #666;
+      font-style: italic;
+    }
+  }
+}
+
+//Taxonomy form
+#addtag {
+  .leira-access-container {
+    margin: 0;
+
+    label {
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+#edittag {
+  .leira-access-container {
+    margin: 0;
+  }
+}
+
+
+//quick edit mode
+.inline-edit-row {
+  .leira-access-container {
+
+    > p {
+      font-style: italic;
+      margin: 5px 0 0 0;
+      color: #555
+    }
+
+    label {
+      display: inline-block;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+}
+
+//tables
+.wp-list-table {
+  .column-leira-access {
+    width: 10em;
+
+    ul, li {
+      margin: 0;
+    }
+  }
+
+  //Posts & Taxonomies
+  &.tags, &.posts {
+    .leira-access-container {
+      display: block;
+      //margin: .2em 0;
+      margin: 0;
+      line-height: 1.5;
+
+      > p {
+        display: block;
+        float: left;
+        width: 6em;
+        line-height: 2.5;
+        font-size: 12px;
+        margin: 0;
+      }
+
+      > .leira-access-controls {
+        display: block;
+        margin-left: 6em;
+      }
+    }
+  }
+}
+
+
